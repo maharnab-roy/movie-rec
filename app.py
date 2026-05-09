@@ -28,6 +28,36 @@ st.set_page_config(
 st.markdown(
     """
 <style>
+/* Hide Streamlit top and bottom default UI */
+[data-testid="stToolbar"] {
+    display: none !important;
+}
+
+[data-testid="stDeployButton"] {
+    display: none !important;
+}
+
+#MainMenu {
+    visibility: hidden !important;
+}
+
+footer {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+header {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+[data-testid="stStatusWidget"] {
+    display: none !important;
+}
 :root {
     --bg: #070914;
     --panel: rgba(255,255,255,0.055);
@@ -55,7 +85,7 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 
 [data-testid="stHeader"] {
-    background: rgba(7,9,20,0.2);
+    display: none !important;
 }
 
 h1, h2, h3 {
